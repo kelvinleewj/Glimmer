@@ -1,0 +1,53 @@
+TO WHOM  IT MAY CONCERN:
+
+//Python 3.8 and MySQLWorkbench is required
+//Before running anything install all required files, please navigate to the appropriate directory on your pc
+//then run on cmd: >> pip install -r requirements.txt
+
+the following files should be installed after running requirements.txt:
+
+asgiref==3.2.10  //ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI
+Django==3.0.8   //Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+mysqlclient==2.0.1  //This is a fork of MySQLdb1.
+pytz==2020.1  //pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations
+six==1.15.0   //Six is a Python 2 and 3 compatibility library.
+sqlparse==0.3.1   //is a non-validating SQL parser module. It provides support for parsing, splitting and formatting SQL statements.
+
+
+//Next, open MySQL Workbench, and in the top menu under Server, select Data Import
+//Select option "Import from Dump Project Folder", and browse for folder "..\Donation\DB SQL files" and click Start Import
+//Now your database is created and populated with default users
+
+
+//Next, initialize the initdb.py file on the shell by typing in windows CMD:
+
+C:\...Desktop\donation> python manage.py shell <  donation/initdb.py
+
+
+
+//Start running the server by typing in windows CMD:
+
+C:\...\Desktop\donation> python manage.py runserver
+
+
+
+//The following message should appear:
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 21, 2020 - 15:08:37
+Django version 3.0.8, using settings 'donation.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+
+
+//Once message displayed, go to your web browser and start up http://127.0.0.1:8000
+//Ensure you have the MySQL instance running before you are able to view the page.
+
+//For admin priviledge, use the following credentials:
+
+username:  root
+password:  password
